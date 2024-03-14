@@ -1,0 +1,22 @@
+# server配置
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+# 连接池配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_user_center
+    username: root
+    password: root
+
+# mybatis-plus的配置
+mybatis-plus:
+  type-aliases-package: org.wh.pojo
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted  #全局逻辑删除
+      id-type: auto #主键策略自增长
+      table-prefix: p_ # 设置表的前缀
