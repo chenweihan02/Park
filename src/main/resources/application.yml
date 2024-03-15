@@ -1,3 +1,21 @@
+alipay:
+  easy:
+    protocol: https
+    getewayHost: openapi-sandbox.dl.alipaydev.com
+    signType: RSA2
+    appId: 9021000135629750
+    merchantPrivateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCQa1wc78R8tlIYtLdaURCAZvb+6FPeS/Q0sGNJRmUWyDr9v/CwkZdV1AqEw3+Vy2HpDCANLcqeiNPIp8PCy+Se1lHiQ2m2koeYwf0fEGOer4VYQMZEL+ultHFEe1Zcg/uVriH5tU2ixYRZmcwthU8Q/EAmuCOsDW2zlZa8LvBOm6ortySklKvFOudVSrnpxFJG3AoYpLkbxla8m0SFK996WjFT+KLOK/T0G+yR3LHroCQ1kuM5Vb880QDAbwb+ZzSvFwuVx3IdyDqVFRZ6iM+gL3mkRHWeiG43fa+xw50d6wpkyLhsZe3HMsjGO8yLo5tgYCNxK/k0XdE3zntIOSeVAgMBAAECggEABlVO8s3o9fcg3oh+Se2oJZleV4tksijuiqj5kasOn9MkEyCps3SPCGqGE5BnNfB3WLr5ZNqPOiiR8Qi6Yv6CBh0r9hoytpjybVaEfSpA1CKqXFZq226mjNu+49vsy53WGJhMUSEMSIkU5sEB3TUtZHdLcOc+WTs1hlyXAaWlUC0eMVh8Z4dumevR2A8F+Pb7KVZDQ0E1dPTfUh2/9mFRTcm7QNJEcybkdzGfMgwBJuPbvEnR4QDv3AptFeWBmKa8hJ0r1/5HRGKWDe6XunmrE5YTiYEEWHH9gAKRDEECFVn0u7SIt/6uIn3BUOsuRk9D5VeohngZqe6bGbyg1EuE+QKBgQDrZ7kTXuIwEF0VirLnkGdm58FVBbkz/fHJEuhqIuRtQfB7058hP6OKkh0z5a34viE0lht2XLtUS1uxKXQdP/BmOJ4TA+8RwqGU/fKpNQKMjrOjdUoQVbaOnQqcXfXGHhMgwlBIq5Pjj8GS062TH1tP5CXFRQxTwu2jS5ACJTFeywKBgQCdDd0h1rmY+wUIfnI6vtKqJAKakpxbxXBosrBaGufO7/4DqNUHOF4M2NAC/X1bv3zrsMlb3T485MjDLf9pdnZYlghXECRVbgw93I4PHSNt4/P8s3i3dYFa4eGcm2o5e9TgZq18tgHFs/pnDnsOWziZddq2s3YJYbyxAolsZ/FnHwKBgBXzSweqXk77B6L9lucOyQWIcLeb3AQkFsqYD8Ht1Pz3HBR/zCPOilJeg4iWTx2VpQUBRjhIN1OJ31fqtKARmTn+54aAZGd0jZqV/22VutIecFO6mRhi1a4AqL+h50v8++2fENtl3FloyzUEtfe1Ac+2R2tYn+ijkYMbhacdjrf3AoGAR2TmAVv7Qu/ZeeMBSnM0kOONy3aaXZ2DXBTe1hclCY1Pi5pUPNQC7RQiezmAoxSJVRsobfpFMKlQGmnukaKoadzKLcnIuo0sQ3LfoT89u9bEMzvixINGKmpEhUyhHUCNpPUIKIkUhSsryW1rwzr0n85TfnpWTi1/+XeNwRn/Q0ECgYEAtiXa+h1p7mJ4x/2AvWemvluIniC5J2zOxSShKE7dgPgUSOnZ67vdf66vRxoJYhiwmzZJ0shKPBbehX05k1mzy2oW2v64e2Oxxo32QkAVzP5gws0jc3w5Vd42teed6kUWpwJVwSsuzA+PyFXSqii/QhoTlNAvNu80EcSwQSyC/PY=
+    alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnNJkpAZ9wzkncLHJyUVfr/FiLklk/4EG+kZG5Y088DOdFlpyF8XySxQmX6Z0Z2GUWtP8EeuKumSh4kPEtB6i3yyeANikMu3YUbv5OQaK0tF6rbSYlFd9yK/XnW35qunX0SWTWevrtYMP1VyVpAq/L3CSbQJczVOBQqJ9PRgmXBnspDZ1oCpC0ZUVkUpFMdyweqQPyIYWHMNnEngdR3fHhn3NjCZA+8vnwDovwycfSPBlJD9XvWGaGCG6+WSUfxCRIlKmme44Tm3oRPvy8oqHv0+HuK/1xnC/e4rnHa1qbCeEZYVzRqvWsw3Jh11M+9fDDO5pEgjUB+jivixHfLKb9QIDAQAB
+    notifyUrl: https://20c9f251.r26.cpolar.top/notify
+
+logging:
+  config: classpath:logback.xml
+
+# netty 硬件监听端口
+socket:
+  port: 8090
+  host: 127.0.0.1
+
 # server配置
 server:
   port: 8080
@@ -8,15 +26,38 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_user_center
+    url: jdbc:mysql://localhost:3306/park_db
     username: root
     password: root
 
 # mybatis-plus的配置
 mybatis-plus:
-  type-aliases-package: org.wh.pojo
   global-config:
     db-config:
-      logic-delete-field: isDeleted  #全局逻辑删除
+      #      logic-delete-field: isDeleted  #全局逻辑删除
       id-type: auto #主键策略自增长
-      table-prefix: p_ # 设置表的前缀
+#      table-prefix: p_ # 设置表的前缀
+
+# liteflow
+#liteflow:
+#  # 规则文件 失败重试次数 打印执行日志 监控日志
+#  ruleSource : config/*.el.xml
+#  retry-count: 0
+#  print-execution-log: true
+#  monitor:
+#    enable-log: true
+#    period: 300000
+#  request-id-generator-class: com.platform.orderserver.config.AppRequestIdGenerator
+#  # 上下文的最大数量槽
+#  slot-size : 10240
+#  # 线程数，默认为64
+#  main-executor-works: 64
+#  # 异步线程最长等待时间 秒
+#  when-max-wait-seconds: 15
+#  # when 节点全局异步线程池最大线程数
+#  when-max-workers: 16
+#  # when 节点全局异步线程池队列数
+#  when-queue-limit: 5120
+#  # 在启动的时候就解析规则
+#  parse-on-start: true
+#  enable: true

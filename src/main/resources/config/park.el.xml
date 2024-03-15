@@ -1,0 +1,10 @@
+<?xmlversion="1.0"encoding="UTF-8"?>
+<flow>
+    <chain name="price">
+        THEN(a,b,c);
+    </chain>
+
+    <chain name="scChain">
+        SWITCH(s1).to(s2,THEN(a,b).id("d"));
+    </chain>
+</flow>
